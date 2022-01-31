@@ -1,6 +1,5 @@
 import vtkmodules.all as vtk
-from vtkmodules.vtkRenderingCore import vtkRenderWindow
-from vtkmodules_vtkFiltersSources import vtkConeSource
+from vtkmodules.vtkFiltersSources import vtkSphereSource
 
 from mvc.MyCtrl import MyView
 
@@ -8,7 +7,7 @@ from mvc.MyCtrl import MyView
 class ValuesVTKSphere(vtk.vtkActor, MyView):  # vtk显示的具体内容
     def __init__(self):
         super(ValuesVTKSphere, self).__init__()
-        self.source = vtk.vtkSphereSource()
+        self.source = vtkSphereSource()
         self.source.SetCenter(5, 0, 0)
         self.source.SetRadius(3)
         self.mapper = vtk.vtkPolyDataMapper()

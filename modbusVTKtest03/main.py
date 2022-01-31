@@ -1,10 +1,8 @@
-import random
+
 import sys
 from PySide6 import QtWidgets, QtCore
 from mvc.MyCtrl import MyCtrl
 from ui_MainWindow import Ui_MainWindow
-import threading
-import time
 
 
 class UiMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):

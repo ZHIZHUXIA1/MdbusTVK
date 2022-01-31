@@ -3,9 +3,7 @@
    日期：2022年01月31日
 """
 import vtkmodules.all as vtk
-from vtkmodules.vtkRenderingCore import vtkRenderWindow
-from vtkmodules_vtkFiltersSources import vtkConeSource
-
+from vtkmodules.vtkFiltersSources import vtkConeSource
 from mvc.MyCtrl import MyView
 
 

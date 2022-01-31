@@ -2,7 +2,7 @@
    作者：zhan
    日期：2022年01月31日
 """
-from PySide6 import QtWidgets, QtCore
+from PySide6 import QtWidgets
 from mvc.MyCtrl import MyView
 from ui_WidgetValuesSphere import Ui_WidgetValuesSphere
 

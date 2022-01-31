@@ -4,7 +4,6 @@
 """
 import modbus_tk.modbus_tcp as ms
 import modbus_tk.defines as de
-from cpppo.server.enip.get_attribute import proxy
 import time
 import threading
 

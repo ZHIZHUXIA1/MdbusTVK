@@ -1,7 +1,7 @@
 from vtk.qt.QVTKRenderWindowInteractor import QVTKRenderWindowInteractor
 from vtkmodules.vtkRenderingCore import vtkRenderWindow
 from ValuesVTKSphere import ValuesVTKSphere
-from modbusVTKtest02.ValuesVTKCone import ValuesVTKCone
+from ValuesVTKCone import ValuesVTKCone
 from vtkmodules.vtkRenderingCore import vtkRenderWindow,  vtkRenderer
 
 
