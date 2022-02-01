@@ -13,9 +13,9 @@ from cpppo.server.enip.get_attribute import proxy
 from influxdb_client.client.write_api import SYNCHRONOUS
 
 url = "http://127.0.0.1:8086"
-token = "o0uk8Q7hp01SiRy2L6oic2xZYKu9w56dluIkkkxmfK3tE7-SWL73YdtB1n3Lkdncdk8LxVEQCDGJrY39VS2fjQ=="
+token = "ciayJb8Fofs8g9rUaDVXRQLjHf8D9cNdtOxG3_BRPH93Km7w-bxv8tFLXyVK56Bp6qQdLU5kz2iy2L4AyEIpRw=="
 org = "Z"
-bucket = "Bucket1"
+bucket = "bucket1"
 client = influxdb_client.InfluxDBClient(
     url=url,
     token=token,
@@ -38,7 +38,7 @@ class ReadModbusTcp:
                 master.set_timeout(5.0)
                 self.dictReadTag = master.execute(1, de.READ_HOLDING_REGISTERS, int(dict["Start"]), int(dict["Num"]))
                 p = influxdb_client.Point("mem").tag("location", dict["Name"])  .field("posx", self.dictReadTag[0]) \
-                .field("posy", self.dictReadTag[1]).field("posz", 1)
+                .field("posy", self.dictReadTag[1]).field("posz", self.dictReadTag[2])
                 write_api.write(bucket=bucket, org=org, record=p)
             except Exception as e:
                 print(dict["Name"], e)
