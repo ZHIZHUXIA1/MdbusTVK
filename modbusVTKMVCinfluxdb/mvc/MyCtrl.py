@@ -6,11 +6,15 @@ from ViewBase import ViewBase
 from ReadModbusTcp import ReadModbusTcp
 import time
 import threading
+from readxml import readxml
 
 
 class MyCtrl(CtrlBase, ReadModbusTcp):
-    def __init__(self, dict):
-        self.dict = dict
+
+    def __init__(self, name):
+        self.name = name
+        read1 = readxml(self.name)
+        self.dict = read1.dict
         self.signal = Signal()
         threading1 = threading.Thread(target=self.StartReadModbusTcp, args=(self.dict,))
         threading1.start()

@@ -50,21 +50,4 @@ class ReadModbusTcp:
 
 
 
-def readEthernetIP(dict):
-  source = proxy(dict["host"
-                      ""])
-  while True:
-    time.sleep(1)
-    try:
-      val, = source.read(dict["tag_name"], dict["route_path"])
-      val1, = source.read(dict["tag_name1"], dict["route_path"])
-      val2, = source.read(dict["tag_name2"], dict["route_path"])
-      p = influxdb_client.Point("mem").tag("location", dict["id"])\
-        .field("dist", val[0] / 100.0).field("luff", val[1] / 100.0).field("slew", val[2] / 100.0).field("belt", val[4])\
-        .field("flow_cur", val[15]).field("flow_set", val[20]).field("flow_accumulate", val[17]).field("accumulate_set", val[18])\
-        .field("mode", val[19]).field("bucket_current", val[11]).field("flow1", val1[33]).field("angle_left", val2[0] / 100.0).field("angle_right", val2[1] / 100.0)
-
-    except Exception as e:
-      print("%s, read data error! message: %s" % (dict["id"], e))
-      source = proxy(dict["host"], route_path=dict["route_path"])
 
