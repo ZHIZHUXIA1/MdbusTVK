@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Simulations>
+<Cone ID="1" Name="SR1" IP="" Port="0" />
+<Cylinder ID="2" Name="SR2" IP="" Port="0" />
+</Simulations>
