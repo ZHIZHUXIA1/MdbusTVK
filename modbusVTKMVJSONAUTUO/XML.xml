@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Simulations>
+    <SR PORT="502" IP="127.0.0.1" Name="SR1" Start="0" Num="3" />
+
+    <SR PORT="503" IP="127.0.0.1" Name="SR2" Start="0" Num="3"/>
+    <SR PORT="504" IP="127.0.0.1" Name="SR2" Start="0" Num="3"/>
+
+</Simulations>
