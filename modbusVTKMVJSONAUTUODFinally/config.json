@@ -1,0 +1,15 @@
+{
+  "SRdata": [  {"Name" : "SR1" ,"IP" : "127.0.0.1", "PORT": "502", "Start" : "0", "Num" : "6"},
+    {"Name" : "SR2" ,"IP" : "127.0.0.1", "PORT": "503", "Start" : "0", "Num" : "6"}
+
+     ],
+  "InfluxDB":[ {  "url" : "http://127.0.0.1:8086", "token" :"ciayJb8Fofs8g9rUaDVXRQLjHf8D9cNdtOxG3_BRPH93Km7w-bxv8tFLXyVK56Bp6qQdLU5kz2iy2L4AyEIpRw==",
+      "org" : "Z" , "bucket" : "bucket2"}
+
+
+
+    ]
+
+
+
+}

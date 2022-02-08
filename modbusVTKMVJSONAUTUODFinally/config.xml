@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Simulations>
+    <SR PORT="502" IP="127.0.0.1" Name="SR1" Start="0" Num="3" />
+
+    <SR PORT="503" IP="127.0.0.1" Name="SR2" Start="0" Num="3"/>
+    <SR PORT="504" IP="127.0.0.1" Name="SR2" Start="0" Num="3"/>
+    <InfluxDB url = "http://127.0.0.1:8086" token = "ciayJb8Fofs8g9rUaDVXRQLjHf8D9cNdtOxG3_BRPH93Km7w-bxv8tFLXyVK56Bp6qQdLU5kz2iy2L4AyEIpRw=="
+      org= "Z"  bucket = "bucket2"/>
+
+</Simulations>
